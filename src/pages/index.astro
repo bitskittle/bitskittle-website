@@ -1,16 +1,255 @@
 ---
-
+// src/pages/index.astro
 ---
-
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bits.kittle | Powering Digital Excellence for Businesses Worldwide</title>
+    <meta name="description" content="Based in Canada, bits.kittle is a premier IT and digital solutions consultancy delivering custom IT solutions, web services, and data insights to help your business thrive globally.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Global Styles -->
+    <style is:global>
+        @import '../styles/global.css';
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-sm border-b border-gray-200/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="/" class="text-2xl font-bold text-gray-900">bits.kittle<span class="text-blue-600">.</span></a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
+                    <a href="#why-us" class="text-gray-600 hover:text-blue-600 transition-colors">Why Us</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                </nav>
+                <div class="flex items-center">
+                    <div class="flex items-center space-x-2 text-gray-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3" />
+                        </svg>
+                        <span class="font-medium">EN</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-[80vh] min-h-[500px] flex items-center justify-center text-center">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop');"></div>
+            <div class="absolute inset-0 bg-white/70"></div>
+            <div class="relative z-10 px-4 sm:px-6 lg:px-8">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight">
+                    Powering <span class="gradient-text">Digital Excellence</span> for Businesses Worldwide
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto text-lg sm:text-xl text-gray-700">
+                    Based in Canada, we are your dedicated digital technology partner, delivering custom IT solutions, web services, and data insights to help your business thrive globally.
+                </p>
+                <div class="mt-10">
+                    <a href="#contact" class="inline-block bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105">
+                        Get a Free Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted By Section -->
+        <section class="py-12 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-sm font-semibold uppercase text-gray-500 tracking-widest">TRUSTED BY PARTNERS ACROSS NORTH AMERICA</h2>
+                <p class="mt-4 text-4xl font-light text-gray-700">Conservation X Labs</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 sm:py-28">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">A Complete Digital & IT Solution</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">From strategy to execution, we provide the expertise you need to succeed.</p>
+                </div>
+                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Service Card 1 -->
+                    <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="flex-shrink-0 mb-4">
+                            <svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Enterprise IT Solutions Consulting</h3>
+                        <p class="mt-2 text-gray-600">Providing strategic technology guidance to align your IT infrastructure with your core business objectives.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="flex-shrink-0 mb-4">
+                            <svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Enterprise Web Hosting</h3>
+                        <p class="mt-2 text-gray-600">Reliable, secure, and high-performance hosting solutions tailored for enterprise-level traffic and applications.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="flex-shrink-0 mb-4">
+                            <svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Website SEO</h3>
+                        <p class="mt-2 text-gray-600">Enhancing your visibility on search engines to attract more organic traffic and qualified leads.</p>
+                    </div>
+                    <!-- Service Card 4 -->
+                    <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="flex-shrink-0 mb-4">
+                            <svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Site Performance Optimization</h3>
+                        <p class="mt-2 text-gray-600">Dramatically improving your website's loading speed for a better user experience and higher conversions.</p>
+                    </div>
+                    <!-- Service Card 5 -->
+                    <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="flex-shrink-0 mb-4">
+                            <svg class="h-8 w-8 text-blue-600" xmlns="http://wwwwww.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Website Data Analytics</h3>
+                        <p class="mt-2 text-gray-600">Uncovering valuable insights from your website data to make informed, strategic business decisions.</p>
+                    </div>
+                    <!-- Service Card 6 -->
+                    <div class="p-8 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="flex-shrink-0 mb-4">
+                            <svg class="h-8 w-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Website Architecture Design</h3>
+                        <p class="mt-2 text-gray-600">Building scalable, secure, and robust technical foundations for your web applications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-us" class="py-20 sm:py-28 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Why Partner With bits.kittle?</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">We deliver more than just code. We deliver a competitive advantage.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-10">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
+                                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-bold text-gray-900">Deeply Integrated Partnership</h3>
+                                <p class="mt-2 text-gray-600">We don't just build, we embed. By deeply understanding your business model from day one, we design and deliver truly customized solutions that function as a natural extension of your team.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
+                                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-bold text-gray-900">World-Class Technical Expertise</h3>
+                                <p class="mt-2 text-gray-600">Gain a decisive advantage with leadership from a <strong class="text-gray-800">Stanford University graduate</strong> with over <strong class="text-gray-800">20 years of experience</strong> architecting and building solutions at the world's top tech and Fortune 500 companies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="rounded-lg shadow-xl w-full h-full object-cover" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" alt="A diverse team of professionals collaborating in a modern office.">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Values Section -->
+        <section id="values" class="py-20 sm:py-28 bg-blue-600 text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold">Our Values</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-blue-200">The principles that guide our partnership with you.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <h3 class="text-xl font-bold">Client Success is Our Metric</h3>
+                        <p class="mt-2 text-blue-100">We go beyond deliverables. We measure our success by the tangible value and business growth we create for you. Your goals are our goals.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Bias for Action</h3>
+                        <p class="mt-2 text-blue-100">We are proactive, agile, and results-driven. We believe in rapid execution and iterative improvement to deliver value quickly and efficiently.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Partnership Built on Trust</h3>
+                        <p class="mt-2 text-blue-100">Transparency, clear communication, and unwavering reliability are the cornerstones of our client relationships. We are your dedicated partner, every step of the way.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section id="our-story" class="py-20 sm:py-28">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="relative flex justify-center items-center">
+                        <div class="absolute w-4/5 h-4/5 bg-gray-100 rounded-lg transform -rotate-6"></div>
+                        <img class="relative rounded-lg shadow-xl w-4/5" src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?q=80&w=1915&auto=format&fit=crop" alt="A cute cat named Skittles, the inspiration for the company name.">
+                    </div>
+                    <div class="prose prose-lg max-w-none">
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Our Story</h2>
+                        <div class="mt-6 bg-gray-50 p-6 rounded-lg border-l-4 border-blue-600">
+                            <h3 class="text-xl font-bold text-gray-900">The Inspiration Behind Our Name</h3>
+                            <p class="mt-2 text-gray-600">
+                                People often ask about our name. "bits.kittle" is inspired by a beloved cat named Skittles. To us, Skittles represents the perfect blend of agility, reliability, and approachability—qualities we embed into every project. We combine the technical precision of "bits" with the friendly, dependable spirit of "kittle" to build technology that not only works, but works for you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section id="contact" class="py-20 sm:py-28 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Ready to Elevate Your Digital Presence?</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
+                    Let's discuss how our expertise can help you achieve your business goals. Reach out today for a no-obligation consultation.
+                </p>
+                <div class="mt-10">
+                    <a href="mailto:contact@bitskittle.com" class="inline-block bg-blue-600 text-white font-semibold px-10 py-4 rounded-lg shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300">
+        <div class="container mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-xl font-bold">bits.kittle<span class="text-blue-500">.</span></p>
+            <p class="mt-2 text-sm text-gray-400">Serving a global clientele with partners across North America and China.</p>
+            <div class="my-4 border-t border-gray-700 w-1/4 mx-auto"></div>
+            <p class="text-sm text-gray-500">&copy; 2025 bits.kittle Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
 </html>
